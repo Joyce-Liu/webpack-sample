@@ -11,6 +11,14 @@ module.exports={
         filename:"bundle.js"//打包后输出文件的文件名
     },
 
+    module: {
+        rules: [
+            {
+                test: /\.json$/,
+                use: 'json-loader'
+            }
+        ]
+    },
     devServer:{
         contentBase:'./public',//本地服务器所加载的页面所在的目录
         colors: true,//终端输出结果为彩色
